@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Clone</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0f172a;
+            color: white;
+            display: flex;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #1e293b;
+            padding: 20px;
+            height: 100vh;
+        }
+        .sidebar h2 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            padding: 10px;
+            cursor: pointer;
+        }
+        .sidebar ul li:hover {
+            background-color: #334155;
+        }
+        .main-content {
+            flex: 1;
+            padding: 20px;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            background-color: #1e293b;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        .claim-button {
+            background-color: #22c55e;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .balance {
+            font-weight: bold;
+        }
+        .content {
+            margin-top: 20px;
+        }
+        .search-form {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            background-color: #1e293b;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .search-form input, .search-form select {
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+        }
+        .search-button {
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+            background-color: #1e293b;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        table th, table td {
+            padding: 10px;
+            border-bottom: 1px solid #334155;
+            text-align: left;
+        }
+        table th {
+            background-color: #334155;
+        }
+        .price-tag {
+            font-weight: bold;
+            color: #22c55e;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>ElonMoney Shop</h2>
+        <ul>
+            <li><i class="fas fa-home"></i> Dashboard</li>
+            <li><i class="fas fa-shopping-cart"></i> Shop #1 (Main Shop)</li>
+            <li><i class="fas fa-star"></i> Shop #2 (Second Shop)</li>
+            <li><i class="fas fa-wallet"></i> Your Cards</li>
+            <li><i class="fas fa-money-bill"></i> Add Balance</li>
+            <li><i class="fas fa-exclamation-circle"></i> Report Lost Funds</li>
+            <li><i class="fas fa-history"></i> Transaction History</li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <div class="navbar">
+            <button class="claim-button">Claim your free card!</button>
+            <span class="balance">$ 0.00 <i class="fas fa-plus"></i></span>
+        </div>
+        <div class="content">
+            <h2>Special Shop</h2>
+            <div class="search-form">
+                <input type="text" placeholder="Bank">
+                <input type="text" placeholder="BIN">
+                <input type="text" placeholder="City">
+                <input type="text" placeholder="State">
+                <input type="text" placeholder="Country">
+                <select>
+                    <option>Base</option>
+                </select>
+                <select>
+                    <option>Type</option>
+                </select>
+                <select>
+                    <option>Level</option>
+                </select>
+                <button class="search-button">Search</button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Base</th>
+                        <th>BIN</th>
+                        <th>Expiration</th>
+                        <th>Company</th>
+                        <th>City</th>
+                        <th>State</th>
+                        <th>ZIP</th>
+                        <th>Country</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>MAR#30_USA[GREAT]</td>
+                        <td>440393</td>
+                        <td>12/27</td>
+                        <td>Visa</td>
+                        <td>BEEVILLE</td>
+                        <td>TX</td>
+                        <td>78102</td>
+                        <td>US</td>
+                        <td class="price-tag">$4</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
